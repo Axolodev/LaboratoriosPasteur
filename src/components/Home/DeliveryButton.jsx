@@ -9,11 +9,11 @@ const ButtonCont = styled.div`
 	color: #2c4486;
 	width: 55%;
 	height: 70px;
-	border: red 1px solid;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	background-color: white;
 `;
 
 const Title = MainText(styled.p`
@@ -41,7 +41,7 @@ const Button = styled(NavLink)`
 	padding: 25px;
 	border: none;
 	text-decoration: none;
-	
+
 	&:hover{
 		background-color: #405496;
 		cursor: pointer;
@@ -53,6 +53,7 @@ const Div = styled.div`
 	height: inherit;
 	flex-direction: column;
 	line-height: 1.25em;
+	
 `;
 
 const DeliveryButton = () => (
@@ -61,7 +62,7 @@ const DeliveryButton = () => (
 			<Title>Lorem ipsum dolor sit </Title>
 			<Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</Text>
 		</Div>
-		<Div>
+		<Div grow>
 			<Button to="/">Servicio a Domicilio</Button>
 		</Div>
 	</ButtonCont>
