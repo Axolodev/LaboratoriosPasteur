@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { MainText } from './../styles/AppStyles';
 
 import OurInfo from './../components/AboutUs/OurInfo';
+import DeliveryButton from './../components/Home/DeliveryButton';
 
 const InfoCont = styled.div`
   display: flex;
@@ -11,11 +12,9 @@ const InfoCont = styled.div`
 
 const Delivery = styled.div`
   display: flex; 
-  border: 1px solid blue;
-  width: 100%;
 `;
 
-const Layout = MainText(styled.main`
+const Layout = MainText(styled.div`
   height: 100vh;
   background: darkgoldenrod;
   display: flex;
@@ -24,25 +23,15 @@ const Layout = MainText(styled.main`
   flex-direction: column;
 `);
 
-const Header = styled.h1`
-  color: white;
-  font-size: 4em;
-`;
-
-
 const About = () => (
   <Layout>
-    {/*  
-      - Container for parragraphs and image
-      - Servicio a domicilio (buttom)
-      - Quote about us
-      - Footer
-      */}
     <InfoCont>
-      <OurInfo> Information </OurInfo>  
+      <OurInfo />  
     </InfoCont>
-    <Delivery> Delivery Button </Delivery>
-    {/* <Header>About</Header> */}
+    <Delivery>
+
+    </Delivery>
+      <DeliveryButton />
   </Layout>
 );
 
