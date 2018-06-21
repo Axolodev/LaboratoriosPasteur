@@ -29,7 +29,7 @@ const InfoDesc = styled.div`
 
 const AboutUsTitle = (styled.h1`
 	text-transform: uppercase;
-	font-size: 2em;
+	font-size: 2rem;
 	font-weight: 700;
 	line-height: 1.5em;
 	text-align: left;

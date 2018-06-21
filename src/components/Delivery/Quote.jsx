@@ -13,7 +13,7 @@ const Div = styled.div`
 `; 
 
 const Text = MainText(styled.p`
-	font-size: 1.75em;
+	font-size: 1.65rem;
 	color: white;
 	font-style: italic;
 	line-height: 1.25em;

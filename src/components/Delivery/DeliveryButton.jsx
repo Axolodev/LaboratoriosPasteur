@@ -19,14 +19,14 @@ const ButtonCont = styled.div`
 const Title = MainText(styled.p`
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 1.8em;
+	font-size: 1.8rem;
 	padding: 2px;
 	margin: auto 0px;
 `);
 
 const Text = SecondaryText(styled.p`
 	font-style: italic;
-	font-size: 1.1em;
+	font-size: 1.1rem;
 	padding: 2px;
 	margin: auto 0px;
 
