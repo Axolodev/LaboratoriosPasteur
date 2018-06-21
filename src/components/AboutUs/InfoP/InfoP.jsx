@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import styled from 'styled-components';
 import {MainText, SecondaryText} from './../../../styles/AppStyles';
 
@@ -25,10 +25,10 @@ const InfoP = (props) => {
 		);
 	}
 	return (
-		<div>
+		<Fragment>
 			{title}
 			<Message>{props.message}</Message>
-		</div>
+		</Fragment>
 	);
 };
 

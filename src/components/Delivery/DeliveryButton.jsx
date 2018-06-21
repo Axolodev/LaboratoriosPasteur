@@ -20,14 +20,14 @@ const Title = MainText(styled.p`
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 1.75em;
-	padding: 3px;
+	padding: 2px;
 	margin: auto 0px;
 `);
 
 const Text = SecondaryText(styled.p`
 	font-style: italic;
 	font-size: 1em;
-	padding: 3px;
+	padding: 2px;
 	margin: auto 0px;
 
 `);
@@ -52,7 +52,7 @@ const Div = styled.div`
 	display: flex;
 	height: inherit;
 	flex-direction: column;
-	line-height: 1.25em;
+	line-height: 1em;
 	width: ${props => props.width}%;
 	
 `;
