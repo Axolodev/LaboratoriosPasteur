@@ -8,7 +8,8 @@ const Layout = styled.div`
   box-sizing: border-box;
   height: 380px;
   padding: 1.6em 4.5em 1em;
-  background-color: #2D4882;
+  background-color: ${props => props.theme.secondaryHighlightColor};
+  font-family: ${props => props.theme.mainTextFontFamily};
   color: white;
 
   h1 {
