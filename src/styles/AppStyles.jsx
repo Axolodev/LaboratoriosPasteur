@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const MainText = Component => styled(Component)`
   color: ${props => props.theme.mainLightText};
-  font-family: ${props => props.theme.mainTextFontFamily};
+  font-family: '${props => props.theme.mainTextFontFamily}';
 `;
 
 export const SecondaryText = Component => styled(Component)`
   color: ${props => props.theme.mainLightText};
-  font-family: ${props => props.theme.secondaryTextFontFamily};
+  font-family: '${props => props.theme.secondaryTextFontFamily}';
 `;
 
 export const Section = styled.section`

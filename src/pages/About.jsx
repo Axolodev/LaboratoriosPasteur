@@ -3,22 +3,14 @@ import styled from 'styled-components';
 
 import { MainText } from './../styles/AppStyles';
 
+import Footer from './../components/Footer';
 import OurInfo from './../components/AboutUs/OurInfo';
 import DeliveryButton from './../components/Home/DeliveryButton';
 import Quote from './../components/AboutUs/Quote';
 
 const text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.";
 
-const InfoCont = styled.div`
-  display: flex;
-  width: 100%;
-  background-color: #${props => props.background};
-  align-items: center;
-  flex-direction: column;
-`;
-
 const Layout = MainText(styled.div`
-  height: 135vh;
   background: #989898;
   display: flex;
   align-items: center;
@@ -26,16 +18,34 @@ const Layout = MainText(styled.div`
   flex-direction: column;
 `);
 
+
+const Placeholder = styled.img`
+  height: 200px;
+`;
+
+const Separator = styled.div`
+  padding: 45px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+`;
+
+const InfoBox = styled.div`
+  box-sizing: border-box;
+  padding: 40px 60px 0 60px;
+  background-color: white;
+`;
+
 const About = () => (
   <Layout>
-    <InfoCont background={"ffffff"}>
-      <OurInfo />  
-      
+    <Placeholder />
+    <InfoBox> <OurInfo /> </InfoBox> 
+    <Separator>
       <DeliveryButton />
-    </InfoCont>
-    <InfoCont background={"989898"}>
-      <Quote text={text}/>
-    </InfoCont>
+    </Separator>
+    <Quote text={text}/>
+    <Footer />
   </Layout>
 );
 

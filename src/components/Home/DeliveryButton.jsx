@@ -26,7 +26,7 @@ const Title = MainText(styled.p`
 
 const Text = SecondaryText(styled.p`
 	font-style: italic;
-	font-size: 1.15em;
+	font-size: 1em;
 	padding: 3px;
 	margin: auto 0px;
 
@@ -37,7 +37,7 @@ const Button = styled(NavLink)`
 	color: white;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 0.75em;
+	font-size: 1em;
 	padding: 25px;
 	border: none;
 	text-decoration: none;
@@ -53,16 +53,17 @@ const Div = styled.div`
 	height: inherit;
 	flex-direction: column;
 	line-height: 1.25em;
+	width: ${props => props.width}%;
 	
 `;
 
 const DeliveryButton = () => (
 	<ButtonCont>
-		<Div>
+		<Div width={60}>
 			<Title>Lorem ipsum dolor sit </Title>
 			<Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</Text>
 		</Div>
-		<Div grow>
+		<Div width={35}>
 			<Button to="/">Servicio a Domicilio</Button>
 		</Div>
 	</ButtonCont>
