@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import OurInfo from '../OurInfo';
-import ButtonQuoteContainer from '../Delivery/ButtonQuoteContainer';
+import OurInfo from './OurInfo';
 
 const text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.";
 
@@ -24,14 +23,13 @@ const InfoBox = styled.div`
   background-color: white;
 `;
 
-const About = () => (
+const PageAbout = () => (
   <Layout>
     <Placeholder />
     <InfoBox>
       <OurInfo />
     </InfoBox>
-    <ButtonQuoteContainer quote={text} />
   </Layout>
 );
 
-export default About;
+export default PageAbout;

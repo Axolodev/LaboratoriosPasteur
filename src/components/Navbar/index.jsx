@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-import { MainText } from './../styles/AppStyles';
-import logo from '../assets/logo.svg';
+import logo from '../../assets/logo.svg';
 
 const I = styled.i`
   color: white;
@@ -11,7 +10,7 @@ const I = styled.i`
   padding: 0 0.5em;
 `;
 
-const NavLayout = MainText(styled.nav`
+const NavLayout = styled.nav`
   display: grid;
   grid-template: repeat(4, minmax(2.5vh, 47px)) / 3fr 1fr 2fr;
   grid-template-areas: 
@@ -24,7 +23,7 @@ const NavLayout = MainText(styled.nav`
   position: absolute;
   width: 100%;
   background: linear-gradient(180deg, rgba(44,68,134,1) 0%, rgba(5,6,255,0) 100%, rgba(0,212,255,1) 100%);
-`);
+`;
 
 const ContactSection = styled.div`
   grid-area: contact;

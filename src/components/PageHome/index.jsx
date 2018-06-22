@@ -15,7 +15,7 @@ const Slideshow = styled.div`
   height: 100vh;
 `;
 
-const Home = () => (
+const PageHome = () => (
   <Layout>
     <Slideshow />
     <Intro />
@@ -23,4 +23,4 @@ const Home = () => (
   </Layout>
 );
 
-export default Home;
+export default PageHome;

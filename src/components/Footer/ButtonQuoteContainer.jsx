@@ -1,11 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Quote from './Quote';
 import DeliveryButton from './DeliveryButton';
 
-import styled from 'styled-components';
 
-const Contain = styled.div`
+const Container = styled.div`
 	width: 100%;
 `;
 
@@ -17,14 +17,13 @@ const Separator = styled.div`
   background-color: white;
 `;
 
-
 const ButtonQuoteContainer = (props) => (
-	<Contain>
+	<Container>
 		<Separator>
 			<DeliveryButton />
 		</Separator>
 		<Quote text={props.quote}/>
-	</Contain>
+	</Container>
 );
 
 export default ButtonQuoteContainer;

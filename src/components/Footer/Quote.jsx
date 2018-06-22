@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MainText } from '../../styles/AppStyles';
 
 const Div = styled.div`
 	width: 100%;
@@ -12,17 +11,17 @@ const Div = styled.div`
 	align-items: center;
 `; 
 
-const Text = MainText(styled.p`
+const Text = styled.p`
 	font-size: 1.65rem;
 	color: white;
 	font-style: italic;
 	line-height: 1.25em;
 	width: 50%;
-`);
+`;
 
-const Quote = (props) => (
+const Quote = ({text}) => (
 	<Div>
-		<Text>"{props.text}"</Text>
+		<Text>"{text}"</Text>
 	</Div>
 );
 

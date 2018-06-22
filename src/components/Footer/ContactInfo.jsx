@@ -129,7 +129,7 @@ const Website = styled.div`
   }
 `
 
-const Footer = () => (
+const ContactInfo = () => (
   <Layout>
     <Motto>
       <p>Laboratorios Pasteur, 21 años cuidandonos juntos.</p>
@@ -197,4 +197,4 @@ const Footer = () => (
   </Layout>
 );
 
-export default Footer;
+export default ContactInfo;

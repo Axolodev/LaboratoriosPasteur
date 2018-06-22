@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-import {MainText, SecondaryText} from './../../styles/AppStyles';
-
 
 const ButtonCont = styled.div`
 	color: #2c4486;
@@ -16,21 +14,20 @@ const ButtonCont = styled.div`
 	background-color: white;
 `;
 
-const Title = MainText(styled.p`
+const Title = styled.p`
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 1.8rem;
 	padding: 2px;
 	margin: auto 0px;
-`);
+`;
 
-const Text = SecondaryText(styled.p`
+const Text = styled.p`
 	font-style: italic;
 	font-size: 1.1rem;
 	padding: 2px;
 	margin: auto 0px;
-
-`);
+`;
 
 const Button = styled(NavLink)`
 	background-color: #2c4486;
@@ -54,13 +51,12 @@ const Div = styled.div`
 	flex-direction: column;
 	line-height: 1em;
 	width: ${props => props.width}%;
-	
 `;
 
 const DeliveryButton = () => (
 	<ButtonCont>
 		<Div width={60}>
-			<Title>Lorem ipsum dolor sit </Title>
+			<Title>Lorem ipsum dolor sit</Title>
 			<Text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</Text>
 		</Div>
 		<Div width={35}>
