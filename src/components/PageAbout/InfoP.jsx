@@ -15,19 +15,11 @@ const Message = styled.p`
 	color: #989898;
 `;
 
-const InfoP = (props) => {
-	let title = '';
-	if(props.title) {
-		title = (
-			<Title>{props.title}</Title>
-		);
-	}
-	return (
-		<Fragment>
-			{title}
-			<Message>{props.message}</Message>
-		</Fragment>
-	);
-};
+const InfoP = (props) => (
+	<Fragment>
+		{props.title && <Title>{props.title}</Title>}
+		<Message>{props.message}</Message>
+	</Fragment>
+);
 
 export default InfoP;

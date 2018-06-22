@@ -2,12 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-import { Section as _Section, SecondaryText, MainText } from '../../styles/AppStyles';
 import tecnologiasSVG from '../../assets/icons/tecnologia.svg';
 import domicilioSVG from '../../assets/icons/domicilio.svg';
 import ubicacionSVG from '../../assets/icons/ubicacion.svg';
 
-const Section = styled(_Section)`
+const Section = styled.section`
+  overflow: hidden;
+  width: 100%;
+  min-height: 760px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 `;
@@ -38,22 +41,24 @@ const Healthcare = styled.div`
   justify-content: center;
 `;
 
-const SectionHeader = MainText(styled.h1`
+const SectionHeader = styled.h1`
+  font-family: '${props => props.theme.mainTextFontFamily}';
   color: #959698;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2.2em;
   padding-bottom: 0.5em;
-`);
+`;
 
-const SectionSubheader = SecondaryText(styled.h3`
+const SectionSubheader = styled.h3`
+  font-family: '${props => props.theme.secondaryTextFontFamily}';
   color: #959698;
   font-weight: 1.5em;
   line-height: 1.5em;
   width: 60%;
   font-style: italic;
   text-align: center;
-`);
+`;
 
 const ValueProposition = styled.div`
   width: 39em;

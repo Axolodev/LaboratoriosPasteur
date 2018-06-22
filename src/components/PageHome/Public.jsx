@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Section as _Section } from './../../styles/AppStyles';
 import general from '../../assets/icons/general.svg';
 import mujer from '../../assets/icons/mujer.svg';
 import hombre from '../../assets/icons/hombre.svg';
@@ -9,8 +8,12 @@ import adultomayor from '../../assets/icons/adultomayor.svg';
 import deportista from '../../assets/icons/deportista.svg';
 import organizacion from '../../assets/icons/organizacion.svg';
 
-const Section = _Section.extend`
+const Section = styled.section`
   background: #606163;
+  overflow: hidden;
+  width: 100%;
+  min-height: 760px;
+  height: 100vh;
 `;
 
 const Layout = styled.div`
@@ -32,7 +35,7 @@ const GridItem = styled.div`
   justify-content: center;
   position: relative;
   outline-style: solid;
-  outline-color: white;
+  outline-color: ${props => props.theme.color.white};
   outline-width: 1px; 
 `;
 
@@ -41,7 +44,7 @@ const GridItemLogo = styled.div`
 `;
 
 const GridItemTitle = styled.div`
-  color: ${props => props.theme.mainHighlightColor};
+  color: ${props => props.theme.color.lightBlue};
   margin: 1rem 0;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -53,7 +56,7 @@ const GridItemDescription = styled.div`
   font-family: "Times New Roman";
   font-size: 0.9rem;
   width: 80%;
-  color: white;
+  color: ${props => props.theme.color.white};
   line-height: 1.1rem;
 `;
 

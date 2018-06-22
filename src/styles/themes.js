@@ -1,8 +1,12 @@
 export const globalTheme = {
-  mainTextColor: 'black',
-  mainHighlightColor: '#1995c9',
-  secondaryHighlightColor: '#2c4486',
-  mainBackgroundColor: 'white',
-  mainTextFontFamily: 'sans-serif',
-  horizontalMargin: '1em',
+  color: {
+    black: 'black',
+    lightBlue: '#1995c9',
+    darkBlue: '#2c4486',
+    white: 'white',
+  },
+  fontFamily: {
+    main: 'sans-serif',
+    secondary: '',
+  },
 };

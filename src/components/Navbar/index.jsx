@@ -90,6 +90,16 @@ const Link = styled(NavLink)`
   }
 `;
 
+const ExternalLink = styled.a`
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+
+  &:visited {
+    text-decoration: none;
+  }
+`;
+
 const Img = styled.img`
   width: 57%;
 `;
@@ -101,8 +111,8 @@ const Navbar = () => (
       <SocialsSection>
         <div>labpasteur@gmail.com</div>
         <SocialButtons>
-          <I className="fab fa-facebook-square" />
-          <I className="fab fa-instagram" />
+          <ExternalLink target="_blank" href="https://www.facebook.com/laboratoriospasteuranalisisclinicos"><I className="fab fa-facebook-square" /></ExternalLink>
+          <ExternalLink target="_blank" href="https://www.instagram.com/laboratoriospasteur"><I className="fab fa-instagram" /></ExternalLink>
         </SocialButtons>
       </SocialsSection>
     </ContactSection>
