@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Navbar from './Navbar';
-import Routes from './../pages/Routes';
+import Routes from './Routes';
 import Footer from './Footer';
 
 const Layout = styled.div`

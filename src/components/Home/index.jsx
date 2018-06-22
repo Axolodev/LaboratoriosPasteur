@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MainText } from './../styles/AppStyles';
-import Intro from '../components/Home/Intro';
-import Public from './../components/Home/public';
-import ExtendedFooter from '../components/ExtendedFooter';
+import Intro from './Intro';
+import Public from './Public';
 
-const Layout = MainText(styled.div`
+const Layout = styled.div`
   display: flex;
   flex-direction: column;
-`);
+`;
 
 const Slideshow = styled.div`
   background: teal;
@@ -22,7 +20,6 @@ const Home = () => (
     <Slideshow />
     <Intro />
     <Public />
-    <ExtendedFooter />
   </Layout>
 );
 

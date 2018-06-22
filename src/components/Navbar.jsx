@@ -111,9 +111,9 @@ const Navbar = () => (
     <LinksSection>
       <Link to="/">Inicio</Link>
       <Link to="/about">Sobre Nosotros</Link>
-      <Link to="/about">Productos y servicios</Link>
-      <Link to="/about">Noticias</Link>
-      <Link to="/about">Contacto</Link>
+      <Link to="/">Productos y servicios</Link>
+      <Link to="/">Noticias</Link>
+      <Link to="/contact">Contacto</Link>
     </LinksSection>
   </NavLayout>
 );
