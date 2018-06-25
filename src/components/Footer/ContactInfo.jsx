@@ -58,6 +58,12 @@ const ContactItem = styled.div`
   }
 `
 
+const PhoneNumbers = styled.p`
+  flex: 2;
+  text-align: right;
+  padding: 0 40% 0 0;
+`
+
 const Schedule = styled.div`
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -76,9 +82,14 @@ const DirectMessage = styled.div`
   }
 
   textarea {
+    font-size: 12px;
+    font-family: inherit;
     height: 2.2em;
-    width: 95%;
-    margin: 0 0 1em 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    margin: 0 auto 1em;
+    background-color: #8C9ABB;
     resize: none;
   }
 
@@ -87,7 +98,12 @@ const DirectMessage = styled.div`
   }
 
   input {
+    height: 2.2em;
     width: 50%;
+    padding: 5px;
+    border: 0;
+    margin: 0.5em 0;
+    background-color: #8C9ABB;
     float: right;
   }
 `
@@ -146,8 +162,8 @@ const ContactInfo = () => (
         <hr/>
         <ContactItem>
           <p>Teléfono</p>
-          <p>01 (81) 8354 8491<br/>
-          8358 3957</p>
+          <PhoneNumbers>01 (81) 8354 8491<br/>
+          8358 3957</PhoneNumbers>
         </ContactItem>
         <hr/>
         <ContactItem>
