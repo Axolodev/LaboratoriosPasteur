@@ -12,13 +12,11 @@ const thirdParagraph = "Donec quam felis, ultricies nec, pellentesque eu, pretiu
 const InfoDesc = styled.div`
 	display: grid;
 	width: 100%;
-	height: 100%;
 	grid-template-columns: 50% 50%;
-	grid-template-rows: 10% 40% 35% 15%;
+	grid-template-rows: 10% auto 15%;
 	grid-template-areas: 
 		"intro intro"
 		"image par1"
-		"image par2"
 		"par3 par3";  
 	grid-auto-flow: row;
 	grid-gap: 5px;
@@ -26,7 +24,7 @@ const InfoDesc = styled.div`
 	background-color: white;
 `;
 
-const AboutUsTitle = (styled.h1`
+const AboutUsTitle = styled.h1`
 	text-transform: uppercase;
 	font-size: 2rem;
 	font-weight: 700;
@@ -34,7 +32,7 @@ const AboutUsTitle = (styled.h1`
 	text-align: left;
 	padding-left: 14px;
 	color: #989898;
-`);
+`;
 
 const Intro = styled.div`
 	grid-area: intro;
@@ -61,28 +59,31 @@ const ImageContainer = styled.div`
 const Par1 = styled.div`
 	grid-area: par1;
 	padding: 5px 10px;
+	margin: auto;
 `;
 
-const Par2 = styled.div`
-	grid-area: par2;
-	padding: 5px 10px;
-`;
+const InfoPadded = styled(InfoP)`
+	padding-bottom: 30px;
+`
 
-const Par3 = styled.div`
+const Par2 = styled(InfoP)`
 	grid-area: par3;
 	padding: 5px 10px;
 `;
 
-const OurInfo = () => (
-	<InfoDesc> 
+
+const OurInfo = (props) => (
+	<InfoDesc className={props.className}> 
 		<Intro> 
 			<AboutUsTitle> Sobre Nosotros </AboutUsTitle>
 			<InfoP message={introMessage} />
 		</Intro>
 		<ImageContainer> <Image src={AboutImage}/> </ImageContainer>
-		<Par1> <InfoP message={firstParagraph} title="Subtitle 1" /> </Par1>
-		<Par2> <InfoP message={secondParagraph} title="Subtitle 2" /> </Par2>
-		<Par3> <InfoP message={thirdParagraph} /> </Par3>
+		<Par1> 
+			<InfoPadded message={firstParagraph} title="Subtitle 1" />
+			<InfoP message={secondParagraph} title="Subtitle 2" /> 
+		</Par1>
+		<Par2 message={thirdParagraph}> </Par2>
 	</InfoDesc>
 );
 

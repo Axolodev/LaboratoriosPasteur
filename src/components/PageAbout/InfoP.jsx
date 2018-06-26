@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.p`
@@ -16,10 +16,10 @@ const Message = styled.p`
 `;
 
 const InfoP = (props) => (
-	<Fragment>
+	<div className={props.className}>
 		{props.title && <Title>{props.title}</Title>}
 		<Message>{props.message}</Message>
-	</Fragment>
+	</div>
 );
 
 export default InfoP;
