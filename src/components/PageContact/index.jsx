@@ -30,7 +30,7 @@ const Del = styled(Delivery)`
 	align-self: end;
 `;
 
-const MapaCont = styled.div`
+const MapaCont = styled(Map)`
 	grid-area: Mapa;
 `;
 
@@ -40,9 +40,7 @@ const PageContact = () => (
 		<Container>
 			<Contact />
 			<Del />
-			<MapaCont> 
-				<Map />
-			</MapaCont>
+			<MapaCont /> 
 		</Container>
 	</div>
 );

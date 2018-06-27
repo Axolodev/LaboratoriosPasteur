@@ -32,6 +32,10 @@ const TextoExt = Texto.extend`
 	padding-left: 60px;
 `;
 
+const Email = Texto.extend`
+	font-size: calc(1.2rem - 0.1vw);
+`
+
 const ContactData = (props) => (
 	<Contacto className={props.className}>
 		<Titulo> Contacto </Titulo>
@@ -46,7 +50,7 @@ const ContactData = (props) => (
 		</div>
 		<div>
 			<Subtitulo> E-mail </Subtitulo>
-			<Texto> pasteur.laboratorio@yahoo.com.mx </Texto>
+			<Email> pasteur.laboratorio@yahoo.com.mx </Email>
 		</div>
 			
 	</Contacto>

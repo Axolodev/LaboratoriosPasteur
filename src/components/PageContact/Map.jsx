@@ -38,7 +38,7 @@ class Map extends Component {
 		)));
 
 		return (
-			<Div>
+			<Div className={this.props.className}>
 				<MyMapComponent 
 					googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9GULpt__ZrXICuni67CorQ79P8FbIP3g&v=3.exp&libraries=geometry,drawing,places"
 					loadingElement={<div style={{ height: `100%` }} />}
