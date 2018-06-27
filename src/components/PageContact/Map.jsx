@@ -1,12 +1,55 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import { observer } from 'mobx-react';
+
+import Locations from './Locations';
+import SucursalesStore from './SucursalesStore';
 
 const Div = styled.div`
 	display: flex;
+	flex-direction: column;
 `;
 
-const Map = () => (
-	<div></div>
-);
+const Location = styled(Locations)`
+	padding-top: 10px;
+`;
 
-export default Map;
+class Map extends Component {
+
+	render() {
+		const { sucursales, arrivedData } = SucursalesStore;
+		
+		const MyMapComponent = withScriptjs(withGoogleMap((props) => (
+			<GoogleMap
+				defaultZoom={12}
+				defaultCenter={{ lat:25.645376, lng: -100.191684 }}
+			>
+				{arrivedData ? 
+					sucursales.map(sucursal => (
+						<Marker 
+							key={sucursal.id} 
+							position={{ lat: sucursal.latitud, lng: sucursal.longitud }} 
+						/>
+					)) : 
+				''}
+			</GoogleMap>
+		)));
+
+		return (
+			<Div>
+				<MyMapComponent 
+					googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9GULpt__ZrXICuni67CorQ79P8FbIP3g&v=3.exp&libraries=geometry,drawing,places"
+					loadingElement={<div style={{ height: `100%` }} />}
+					containerElement={<div style={{ height: `400px` }} />}
+					mapElement={<div style={{ height: `100%` }} />}
+					/>
+				{arrivedData ? 
+					<Location sucursales={sucursales} /> :
+					'' }
+			</Div>
+		)
+	}
+}
+
+export default observer(Map);

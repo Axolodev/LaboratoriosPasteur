@@ -43,8 +43,8 @@ const Button = styled(NavLink)`
 	}
 `;
 
-const Delivery = () => (
-	<Container>
+const Delivery = (props) => (
+	<Container className={props.className}>
 		<Title> Servicio a Domicilio </Title>
 		<Text> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit losequat. </Text>
 		<Button to="/"> Servicio a Domicilio </Button>

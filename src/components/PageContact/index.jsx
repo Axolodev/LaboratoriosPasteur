@@ -3,47 +3,46 @@ import styled from 'styled-components';
 
 import ContactData from './ContactData';
 import Delivery from './Delivery';
+import Map from './Map';
 
 const Placeholder = styled.div`
 	height: 200px;
 `;
 
 const Container = styled.div`
-	display: flex;
-	flex-direction: row;
-	width: 100%;
+	display: grid;
+	grid-template-rows: 50% auto;
+	grid-template-columns: 20% auto;
+	grid-template-areas:
+		"Contacto Mapa"
+		"Domicilio Mapa";
+	grid-column-gap: 50px;
 	box-sizing: border-box;
-	padding: 75px;
-`;
-
-const Mapa = styled.div`
-	height: 100%;
-	border: 1px solid red;
-`;
-
-const Div = styled.div`
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	width: ${props => props.width}%;
-	padding: 10px;
+	padding: 50px 100px;
 `;
 
 const Contact = styled(ContactData)`
-	margin-bottom: 80px;
+	grid-area: Contacto
+`;
+
+const Del = styled(Delivery)`
+	grid-area: Domicilio;
+	align-self: end;
+`;
+
+const MapaCont = styled.div`
+	grid-area: Mapa;
 `;
 
 const PageContact = () => (
 	<div>
 		<Placeholder />
 		<Container>
-			<Div width={20}>
-				<Contact />
-				<Delivery />
-			</Div>
-			<Div width={80}>
-				<Mapa />
-			</Div>
+			<Contact />
+			<Del />
+			<MapaCont> 
+				<Map />
+			</MapaCont>
 		</Container>
 	</div>
 );

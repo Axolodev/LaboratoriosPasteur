@@ -13,6 +13,7 @@ const Titulo = styled.p`
 	font-weight: bold;
 	text-align: left;
 	color: #989898;
+	padding-bottom: 10px;
 `;
 
 const Subtitulo = styled.p`
