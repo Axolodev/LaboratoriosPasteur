@@ -13,6 +13,7 @@ const Div = styled.div`
 
 const Location = styled(Locations)`
 	padding-top: 10px;
+	padding-left: 30px;
 `;
 
 class Map extends Component {
@@ -25,7 +26,7 @@ class Map extends Component {
 				defaultZoom={12}
 				defaultCenter={{ lat:25.645376, lng: -100.191684 }}
 			>
-				{arrivedData ? 
+				{arrivedData === "success" ? 
 					sucursales.map(sucursal => (
 						<Marker 
 							key={sucursal.id} 
@@ -41,10 +42,11 @@ class Map extends Component {
 				<MyMapComponent 
 					googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9GULpt__ZrXICuni67CorQ79P8FbIP3g&v=3.exp&libraries=geometry,drawing,places"
 					loadingElement={<div style={{ height: `100%` }} />}
-					containerElement={<div style={{ height: `400px` }} />}
+					containerElement={<div style={{ height: `30vh` }} />}
 					mapElement={<div style={{ height: `100%` }} />}
+					ref={this.container}
 					/>
-				{arrivedData ? 
+				{arrivedData === "success" ? 
 					<Location sucursales={sucursales} /> :
 					'' }
 			</Div>

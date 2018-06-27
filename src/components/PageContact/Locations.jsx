@@ -34,13 +34,9 @@ const Sucursal = styled.div`
 	padding-bottom: 20px;
 
 	&:not(:nth-child(4n + 0)) {
-		padding-right: 50px;
+		padding-right: 20px;
 	}
 `;
-
-/**
- * En DIRECCION Separar en avenida y CP, colonia, ciudad
- */
 
 const Locations = (props) => {
 	let Sucursales = '';
@@ -49,7 +45,9 @@ const Locations = (props) => {
 			return (
 				<Sucursal key={sucursal.id}>
 					<SucursalName> {sucursal.nombre} </SucursalName>
-					<Direccion> {sucursal.direccion} </Direccion>
+					<Direccion> {sucursal.direccion.calle} </Direccion>
+					<Direccion> {sucursal.direccion.colonia} </Direccion>
+					<Direccion> {sucursal.direccion.ciudad} </Direccion>
 				</Sucursal>
 			);
 		});

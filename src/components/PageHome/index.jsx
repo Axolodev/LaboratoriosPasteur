@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 import Intro from './Intro';
 import Public from './Public';
+import ButtonQuoteContainer from './../Footer/ButtonQuoteContainer';
+
+const text = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.';
 
 const Layout = styled.div`
   display: flex;
@@ -20,6 +23,7 @@ const PageHome = () => (
     <Slideshow />
     <Intro />
     <Public />
+    <ButtonQuoteContainer quote={text} />
   </Layout>
 );
 
