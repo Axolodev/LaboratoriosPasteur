@@ -10,6 +10,7 @@ const Container = styled.div`
 const Title = styled.p`
 	text-transform: uppercase;
 	line-height: 2.5rem;
+	font-family: ${props => props.theme.fontFamily.main};
 	font-size: 2rem;
 	font-weight: bold;
 	text-align: left;
@@ -31,7 +32,7 @@ const Direccion = styled.p`
 const Sucursal = styled.div`
 	width: 25%;
 	box-sizing: border-box;
-	padding-bottom: 20px;
+	padding-top: 30px;
 
 	&:not(:nth-child(4n + 0)) {
 		padding-right: 20px;

@@ -4,6 +4,7 @@ export const globalTheme = {
     lightBlue: '#1995c9',
     darkBlue: '#2c4486',
     white: 'white',
+    greyBlue: '#8b98bd',
   },
   fontFamily: {
     main: 'sans-serif',

@@ -50,6 +50,7 @@ const PhoneSection = styledSection.extend`
 
 const SocialsSection = styledSection.extend`
   width: 29%;
+  font-family: ${props => props.theme.fontFamily.main};
   font-size: 0.8em;
   justify-content: space-between;
   padding: 0 3%;
@@ -82,6 +83,7 @@ const LinksSection = styled.div`
 const Link = styled(NavLink)`
   text-decoration: none;
   font-size: 0.8em;
+	font-family: ${props => props.theme.fontFamily.main};
   text-transform: uppercase;
   color: white;
 
@@ -109,7 +111,7 @@ const Navbar = () => (
     <ContactSection>
       <PhoneSection>(81) 1234 56789</PhoneSection>
       <SocialsSection>
-        <div>labpasteur@gmail.com</div>
+        <div >labpasteur@gmail.com</div>
         <SocialButtons>
           <ExternalLink target="_blank" href="https://www.facebook.com/laboratoriospasteuranalisisclinicos"><I className="fab fa-facebook-square" /></ExternalLink>
           <ExternalLink target="_blank" href="https://www.instagram.com/laboratoriospasteur"><I className="fab fa-instagram" /></ExternalLink>

@@ -9,6 +9,7 @@ const Contacto = styled.div`
 
 const Titulo = styled.p`
 	text-transform: uppercase;
+	font-family: ${props => props.theme.fontFamily.main};
 	font-size: 2rem;
 	font-weight: bold;
 	text-align: left;

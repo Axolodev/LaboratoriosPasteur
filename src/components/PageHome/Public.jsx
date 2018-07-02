@@ -45,6 +45,7 @@ const GridItemLogo = styled.div`
 
 const GridItemTitle = styled.div`
   color: ${props => props.theme.color.lightBlue};
+  font-family: ${props => props.theme.fontFamily.main};
   margin: 1rem 0;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -56,6 +57,7 @@ const GridItemDescription = styled.div`
   font-family: "Times New Roman";
   font-size: 0.9rem;
   width: 80%;
+  font-family: ${props => props.theme.fontFamily.secondary};
   color: ${props => props.theme.color.white};
   line-height: 1.1rem;
 `;

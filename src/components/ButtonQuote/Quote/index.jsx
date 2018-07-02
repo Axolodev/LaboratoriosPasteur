@@ -11,6 +11,9 @@ const Div = styled.div`
 	align-items: center;
 `; 
 
+/**
+ * CHANGE FONT FAMILY
+ */
 const Text = styled.p`
 	font-size: 1.65rem;
 	color: white;

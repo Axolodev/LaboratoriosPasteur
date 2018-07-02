@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Intro from './Intro';
 import Public from './Public';
-import ButtonQuoteContainer from './../Footer/ButtonQuoteContainer';
+import ButtonQuote from './../ButtonQuote';
 
 const text = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.';
 
@@ -23,7 +23,7 @@ const PageHome = () => (
     <Slideshow />
     <Intro />
     <Public />
-    <ButtonQuoteContainer quote={text} />
+    <ButtonQuote quote={text} />
   </Layout>
 );
 

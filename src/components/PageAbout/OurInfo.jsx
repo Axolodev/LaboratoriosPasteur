@@ -24,10 +24,11 @@ const InfoDesc = styled.div`
 	background-color: white;
 `;
 
-const AboutUsTitle = styled.h1`
+const AboutUsTitle = styled.p`
 	text-transform: uppercase;
 	font-size: 2rem;
 	font-weight: 700;
+	font-family: ${props => props.theme.fontFamily.main};
 	line-height: 1.5em;
 	text-align: left;
 	padding-left: 14px;

@@ -18,7 +18,7 @@ const Container = styled.div`
 		"Domicilio Mapa";
 	grid-column-gap: 50px;
 	box-sizing: border-box;
-	padding: 50px 100px;
+	padding: 0px 4.5em 50px;
 `;
 
 const Contact = styled(ContactData)`

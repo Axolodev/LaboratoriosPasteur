@@ -12,6 +12,7 @@ const Container = styled.div`
 const Title = styled.p`
 	text-transform: uppercase;
 	line-height: 2.5rem;
+	font-family: ${props => props.theme.fontFamily.main};
 	font-size: 2rem;
 	font-weight: bold;
 	text-align: left;
@@ -33,6 +34,7 @@ const Button = styled(NavLink)`
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 0.75rem;
+	font-family: ${props => props.theme.fontFamily.main};
 	padding: 15px 25px;
 	border: none;
 	text-decoration: none;

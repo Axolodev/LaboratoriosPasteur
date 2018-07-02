@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import OurInfo from './OurInfo';
-import ButtonQuoteContainer from './../Footer/ButtonQuoteContainer';
+import ButtonQuote from './../ButtonQuote';
 
 const text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.";
 
@@ -28,7 +28,7 @@ const PageAbout = () => (
   <Layout>
     <Placeholder />
     <Info />
-    <ButtonQuoteContainer quote={text} />
+    <ButtonQuote quote={text} />
   </Layout>
 );
 

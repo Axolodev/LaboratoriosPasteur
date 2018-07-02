@@ -4,24 +4,28 @@ import { NavLink } from 'react-router-dom';
 
 
 const ButtonCont = styled.div`
-	color: #2c4486;
+	color: ${props => props.theme.color.darkBlue};
+	background-color: ${props => props.theme.color.white};
 	width: 55%;
 	height: 70px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	background-color: white;
 `;
 
 const Title = styled.p`
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 1.8rem;
+	font-family: ${props => props.theme.fontFamily.main};
 	padding: 2px;
 	margin: auto 0px;
 `;
 
+/**
+ * CHANGE FONT FAMILY
+ */
 const Text = styled.p`
 	font-style: italic;
 	font-size: 1.1rem;
@@ -30,9 +34,10 @@ const Text = styled.p`
 `;
 
 const Button = styled(NavLink)`
-	background-color: #2c4486;
-	color: white;
+	background-color: ${props => props.theme.color.darkBlue};
+	color: ${props => props.theme.color.white};
 	text-transform: uppercase;
+	font-family: ${props => props.theme.fontFamily.main};
 	text-align: center;
 	font-size: 1em;
 	padding: 25px;

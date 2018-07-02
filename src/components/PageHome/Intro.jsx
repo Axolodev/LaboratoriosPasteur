@@ -30,6 +30,7 @@ const TextBlock = styled(NavLink)`
   flex-grow: 1;
   text-decoration: none;
   font-size: 1.8em;
+  font-family: ${props => props.theme.fontFamily.main};
   text-align: center;
 `;
 
@@ -42,7 +43,7 @@ const Healthcare = styled.div`
 `;
 
 const SectionHeader = styled.h1`
-  font-family: '${props => props.theme.mainTextFontFamily}';
+  font-family: ${props => props.theme.fontFamily.main};
   color: #959698;
   text-transform: uppercase;
   font-weight: bold;
@@ -51,7 +52,7 @@ const SectionHeader = styled.h1`
 `;
 
 const SectionSubheader = styled.h3`
-  font-family: '${props => props.theme.secondaryTextFontFamily}';
+  font-family: ${props => props.theme.fontFamily.secondary};
   color: #959698;
   font-weight: 1.5em;
   line-height: 1.5em;
@@ -84,6 +85,7 @@ const ValueCardSupportText = styled.div`
   color: #1995c9;
   font-size: 1.2em;
   font-weight: bold;
+  font-family: ${props => props.theme.fontFamily.main};
   text-transform: uppercase;
   text-align: center;
   padding-top: 1em;
