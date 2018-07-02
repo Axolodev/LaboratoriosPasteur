@@ -7,8 +7,12 @@ import Questions from './Questions';
 
 const Layout = styled.div`
   display: grid;
-  grid-template-columns: 29% 17% 16.5% auto;
+  grid-template-columns: 30% 18% 16% auto;
   grid-template-rows: 18% auto 15%;
+  grid-template-areas:
+    "Motto Motto Motto Motto"
+    "Contact Schedule DM FAQ"
+    "Rights Website Website .";
   box-sizing: border-box;
   height: 380px;
   padding: 1.6em 4.5em 1em;
@@ -27,8 +31,7 @@ const Layout = styled.div`
 `
 
 const Motto = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  grid-area: Motto;
   padding: 13px 10px;
 
   p {
@@ -38,41 +41,35 @@ const Motto = styled.div`
 `
 
 const Contacts = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-area: Contact;
 `
 
 const Schedule = styled.div`
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-area: Schedule;
   box-sizing: border-box;
   padding: 0 0 0 2em;
 `
 
 const DirectMessage = styled.div`
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
+  grid-area: DM;
   box-sizing: border-box;
   padding: 0 0 0 0.4em;
 
 `
 
 const FAQ = styled.div`
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
+  grid-area: FAQ;
   padding: 0 0 0 1em;
 `
 
 const Rights = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
+  grid-area: Rights;
   display: flex;
   align-items: center;
 `
 
 const Website = styled.div`
-  grid-column: 2 / 4;
-  grid-row: 3 / 4;
+  grid-area: Website;
   display: flex;
   align-items: center;
   justify-content: center;
