@@ -8,8 +8,10 @@ const Question = styled.p`
 	padding: 0 0 0.8em 0.3em;
 `;
 
-const Answer = styled.p`
-
+const Answer = styled.li`
+	&:not(:last-child) {
+		padding-bottom: 0.5em;
+	}
 `;
 
 const AnswerList = styled.ul`

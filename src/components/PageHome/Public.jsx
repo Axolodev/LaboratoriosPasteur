@@ -9,7 +9,6 @@ import deportista from '../../assets/icons/deportista.svg';
 import organizacion from '../../assets/icons/organizacion.svg';
 
 const Section = styled.section`
-  background: #606163;
   overflow: hidden;
   width: 100%;
   min-height: 760px;
@@ -48,7 +47,7 @@ const GridItemTitle = styled.div`
   font-family: ${props => props.theme.fontFamily.main};
   margin: 1rem 0;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: bold;
 `;
 

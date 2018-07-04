@@ -18,12 +18,18 @@ const Slideshow = styled.div`
   height: 100vh;
 `;
 
+const Background = styled.div`
+  background: #606163;
+`;
+
 const PageHome = () => (
   <Layout>
     <Slideshow />
     <Intro />
-    <Public />
-    <ButtonQuote quote={text} />
+    <Background>
+      <Public />
+      <ButtonQuote quote={text} />
+    </Background>
   </Layout>
 );
 

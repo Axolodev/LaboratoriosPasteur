@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Div = styled.div`
 	width: 100%;
-	height: 220px;
+	height: 13.75rem;
 	text-align: center;
 	vertical-align: center;
 	display: flex;
@@ -18,7 +18,7 @@ const Text = styled.p`
 	font-size: 1.65rem;
 	color: white;
 	font-style: italic;
-	line-height: 1.25em;
+	line-height: 1.25;
 	width: 50%;
 `;
 

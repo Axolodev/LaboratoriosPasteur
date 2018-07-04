@@ -7,7 +7,7 @@ const ButtonCont = styled.div`
 	color: ${props => props.theme.color.darkBlue};
 	background-color: ${props => props.theme.color.white};
 	width: 55%;
-	height: 70px;
+	height: 4.375rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -39,7 +39,7 @@ const Button = styled(NavLink)`
 	text-transform: uppercase;
 	font-family: ${props => props.theme.fontFamily.main};
 	text-align: center;
-	font-size: 1em;
+	font-size: 1rem;
 	padding: 25px;
 	border: none;
 	text-decoration: none;

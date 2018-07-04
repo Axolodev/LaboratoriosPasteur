@@ -7,26 +7,26 @@ import Questions from './Questions';
 
 const Layout = styled.div`
   display: grid;
-  grid-template-columns: 30% 18% 16% auto;
+  grid-template-columns: 30% 18% 20% auto;
   grid-template-rows: 18% auto 15%;
   grid-template-areas:
     "Motto Motto Motto Motto"
     "Contact Schedule DM FAQ"
     "Rights Website Website .";
   box-sizing: border-box;
-  height: 380px;
+  height: auto;
   padding: 1.6em 4.5em 1em;
   background-color: ${props => props.theme.color.darkBlue};
   font-family: ${props => props.theme.fontFamily.main};
   color: white;
 
   h1 {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 0 0 2em 0.8em;
   }
 
   p, li {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 `
 
@@ -35,7 +35,7 @@ const Motto = styled.div`
   padding: 13px 10px;
 
   p {
-    font-size: 14px;
+    font-size: 0.85rem;
     font-family: ${props => props.theme.fontFamily.main};
   }
 `
@@ -66,6 +66,7 @@ const Rights = styled.div`
   grid-area: Rights;
   display: flex;
   align-items: center;
+  padding-left: 0.8em;
 `
 
 const Website = styled.div`
@@ -97,7 +98,7 @@ const ContactInfo = () => (
       <Message />
     </DirectMessage>
     <FAQ>
-      <h1>PREGUNTAS FREQUENTES</h1>
+      <h1>PREGUNTAS FRECUENTES</h1>
       <Questions />
     </FAQ>
     <Rights>

@@ -6,7 +6,7 @@ import logo from '../../assets/logo.svg';
 
 const I = styled.i`
   color: white;
-  font-size: 2em;
+  font-size: 2rem;
   padding: 0 0.5em;
 `;
 
@@ -39,7 +39,7 @@ const styledSection = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: white;
   height: 100%;
 `;
@@ -51,7 +51,7 @@ const PhoneSection = styledSection.extend`
 const SocialsSection = styledSection.extend`
   width: 29%;
   font-family: ${props => props.theme.fontFamily.main};
-  font-size: 0.8em;
+  font-size: 0.8rem;
   justify-content: space-between;
   padding: 0 3%;
 `;
@@ -67,7 +67,7 @@ const LogoSection = styled.div`
   justify-content: flex-start;
   padding-left:4em;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   flex: 1;
 `;
 
@@ -82,7 +82,7 @@ const LinksSection = styled.div`
 
 const Link = styled(NavLink)`
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 	font-family: ${props => props.theme.fontFamily.main};
   text-transform: uppercase;
   color: white;

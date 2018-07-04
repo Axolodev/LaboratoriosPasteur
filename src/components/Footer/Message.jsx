@@ -11,21 +11,27 @@ const Text = styled.textarea`
 	margin: 0 0 1em 0;
 	resize: none;
 	background-color: ${props => props.theme.color.greyBlue};
-	height: ${props => props.msg ? '4em' : 'initial' };
+	height: ${props => props.msg ? '4em' : '1.5em' };
+	resize: ${props => props.msg ? 'vertical' : 'none' };
+	font-family: ${props => props.theme.fontFamily.main};
+	color: ${props => props.theme.color.white};
 `
 
 const Submit = styled.input`
 	width: 50%;
 	float: right;
+	margin-right: 1em;
 `;
 
 const Message = () => (
 	<div>
-		<FieldName>Email</FieldName>
-		<Text/>
-		<FieldName>Mensaje</FieldName>
-		<Text msg/>
-		<Submit type='submit' value='Enviar'/>
+		<form action="" method="post">
+			<FieldName>Email</FieldName>
+			<Text/>
+			<FieldName>Mensaje</FieldName>
+			<Text msg/>
+			<Submit type='submit' value='Enviar'/>
+		</form>
 	</div>
 );
 
