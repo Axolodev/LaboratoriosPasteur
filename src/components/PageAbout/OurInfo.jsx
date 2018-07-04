@@ -10,82 +10,82 @@ const secondParagraph = "Lorem ipsum dolor sit amet, consectetuer adipiscing eli
 const thirdParagraph = "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.";
 
 const InfoDesc = styled.div`
-	display: grid;
-	width: 100%;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: 10% auto 15%;
-	grid-template-areas: 
-		"intro intro"
-		"image par1"
-		"par3 par3";  
-	grid-auto-flow: row;
-	grid-gap: 5px;
-	overflow: hidden;
-	background-color: white;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% auto 15%;
+  grid-template-areas: 
+      "intro intro"
+      "image par1"
+      "par3 par3";  
+  grid-auto-flow: row;
+  grid-gap: 5px;
+  overflow: hidden;
+  background-color: white;
 `;
 
 const AboutUsTitle = styled.p`
-	text-transform: uppercase;
-	font-size: 2rem;
-	font-weight: 700;
-	font-family: ${props => props.theme.fontFamily.main};
-	line-height: 1.5em;
-	text-align: left;
-	padding-left: 14px;
-	color: #989898;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: ${props => props.theme.fontFamily.main};
+  line-height: 1.5em;
+  text-align: left;
+  padding-left: 14px;
+  color: #989898;
 `;
 
 const Intro = styled.div`
-	grid-area: intro;
-	padding: 10px;
+  grid-area: intro;
+  padding: 10px;
 `;
 
 const Image = styled.img`
-	margin: auto 0;
-	width: 100%;
-	height: auto;
-	max-height: 100%;
+  margin: auto 0;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
 `;
 
 const ImageContainer = styled.div`
-	width: 100%;
-	height: 100%;
-	padding: 0 15px;
-	box-sizing: border-box;
-	grid-area: image;
-	display: flex;
-	align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  grid-area: image;
+  display: flex;
+  align-items: center;
 `;
 
 const Par1 = styled.div`
-	grid-area: par1;
-	padding: 5px 10px;
-	margin: auto;
+  grid-area: par1;
+  padding: 5px 10px;
+  margin: auto;
 `;
 
 const InfoPadded = styled(InfoP)`
-	padding-bottom: 30px;
+  padding-bottom: 30px;
 `
 
 const Par2 = styled(InfoP)`
-	grid-area: par3;
-	padding: 5px 10px;
+  grid-area: par3;
+  padding: 5px 10px;
 `;
 
 
 const OurInfo = (props) => (
-	<InfoDesc className={props.className}> 
-		<Intro> 
-			<AboutUsTitle> Sobre Nosotros </AboutUsTitle>
-			<InfoP message={introMessage} />
-		</Intro>
-		<ImageContainer> <Image src={AboutImage}/> </ImageContainer>
-		<Par1> 
-			<InfoPadded message={firstParagraph} title="Subtitle 1" />
-			<InfoP message={secondParagraph} title="Subtitle 2" /> 
-		</Par1>
-		<Par2 message={thirdParagraph}> </Par2>
-	</InfoDesc>
+  <InfoDesc className={props.className}>
+    <Intro>
+      <AboutUsTitle> Sobre Nosotros </AboutUsTitle>
+      <InfoP message={introMessage} />
+    </Intro>
+    <ImageContainer> <Image src={AboutImage} /> </ImageContainer>
+    <Par1>
+      <InfoPadded message={firstParagraph} title="Subtitle 1" />
+      <InfoP message={secondParagraph} title="Subtitle 2" />
+    </Par1>
+    <Par2 message={thirdParagraph}> </Par2>
+  </InfoDesc>
 );
 
 export default OurInfo;

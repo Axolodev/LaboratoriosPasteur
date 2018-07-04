@@ -6,7 +6,7 @@ import DeliveryButton from './DeliveryButton';
 
 
 const Container = styled.div`
-	width: 100%;
+    width: 100%;
 `;
 
 const Separator = styled.div`
@@ -18,12 +18,12 @@ const Separator = styled.div`
 `;
 
 const ButtonQuoteContainer = (props) => (
-	<Container>
-		<Separator>
-			<DeliveryButton />
-		</Separator>
-		<Quote text={props.quote}/>
-	</Container>
+    <Container>
+        <Separator>
+            <DeliveryButton />
+        </Separator>
+        <Quote text={props.quote}/>
+    </Container>
 );
 
 export default ButtonQuoteContainer;
