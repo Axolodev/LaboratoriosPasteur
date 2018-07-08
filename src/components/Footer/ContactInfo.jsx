@@ -1,61 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ContactMethods from './ContactMethods';
+import Message from './Message';
+import Questions from './Questions';
+
 const Layout = styled.div`
   display: grid;
-  grid-template-columns: 29% 17% 16.5% auto;
+  grid-template-columns: 30% 18% 20% auto;
   grid-template-rows: 18% auto 15%;
+  grid-template-areas:
+    "Motto Motto Motto Motto"
+    "Contact Schedule DM FAQ"
+    "Rights Website Website .";
   box-sizing: border-box;
-  height: 380px;
+  height: auto;
   padding: 1.6em 4.5em 1em;
   background-color: ${props => props.theme.color.darkBlue};
-  font-family: ${props => props.theme.mainTextFontFamily};
+  font-family: ${props => props.theme.fontFamily.main};
   color: white;
 
   h1 {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 0 0 2em 0.8em;
   }
 
   p, li {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 `
 
 const Motto = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  grid-area: Motto;
   padding: 13px 10px;
 
   p {
-    font-size: 14px;
+    font-size: 0.85rem;
+    font-family: ${props => props.theme.fontFamily.main};
   }
 `
 
 const Contacts = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-`
-
-const ContactList = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  line-height: 0.9em;
-`
-
-const ContactItem = styled.div`
-  display: flex;
-  height: 1.8em;
-  padding: 0 0 0 0.8em;
-  align-items: center;
-
-  > p:first-child {
-    flex: 1;
-  }
-
-  > p:last-child {
-    flex: 2;
-  }
+  grid-area: Contact;
 `
 
 const PhoneNumbers = styled.p`
@@ -65,77 +51,32 @@ const PhoneNumbers = styled.p`
 `
 
 const Schedule = styled.div`
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-area: Schedule;
   box-sizing: border-box;
   padding: 0 0 0 2em;
 `
 
 const DirectMessage = styled.div`
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
+  grid-area: DM;
   box-sizing: border-box;
   padding: 0 0 0 0.4em;
 
-  p {
-    padding: 0.2em 0 0.5em 2.3em;
-  }
-
-  textarea {
-    font-size: 12px;
-    font-family: inherit;
-    height: 2.2em;
-    width: 100%;
-    box-sizing: border-box;
-    border: 0;
-    margin: 0 auto 1em;
-    background-color: #8C9ABB;
-    resize: none;
-  }
-
-  textarea[name='Mensaje'] {
-    height: 4em;
-  }
-
-  input {
-    height: 2.2em;
-    width: 50%;
-    padding: 5px;
-    border: 0;
-    margin: 0.5em 0;
-    background-color: #8C9ABB;
-    float: right;
-  }
 `
 
 const FAQ = styled.div`
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
+  grid-area: FAQ;
   padding: 0 0 0 1em;
-
-  h2 {
-    font-size: 12px;
-    font-style: italic;
-    color: #989897;
-    padding: 0 0 0.8em 0.3em;
-  }
-
-  ul {
-    padding: 0 0 1.2em 1.9em;
-    line-height: 1.1;
-  }
 `
 
 const Rights = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
+  grid-area: Rights;
   display: flex;
   align-items: center;
+  padding-left: 0.8em;
 `
 
 const Website = styled.div`
-  grid-column: 2 / 4;
-  grid-row: 3 / 4;
+  grid-area: Website;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,56 +94,18 @@ const ContactInfo = () => (
     </Motto>
     <Contacts>
       <h1>CONTACTO</h1>
-      <ContactList>
-        <ContactItem>
-          <p>Dirección</p>
-          <p>Av. Chapultepec 1922-A<br/>
-          Col. Buenos Aires, Monterrey, Nuevo León</p>
-        </ContactItem>
-        <hr/>
-        <ContactItem>
-          <p>Teléfono</p>
-          <PhoneNumbers>01 (81) 8354 8491<br/>
-          8358 3957</PhoneNumbers>
-        </ContactItem>
-        <hr/>
-        <ContactItem>
-          <p>Email</p>
-          <p>pastuer.laboratorio@yahoo.com.mx</p>
-        </ContactItem>
-        <hr/>
-        <ContactItem>
-          <p>Redes Sociales</p>
-          <p>@laboratoriospasteuranalisisclinicos</p>
-        </ContactItem>
-      </ContactList>
+      <ContactMethods />
     </Contacts>
     <Schedule>
       <h1>HORARIO</h1>
     </Schedule>
     <DirectMessage>
       <h1>MENSAJE DIRECTO</h1>
-      <p>Email</p>
-      <textarea name='Email'/>
-      <p>Mensaje</p>
-      <textarea name='Mensaje'/>
-      <input type='submit' value='Enviar'/>
+      <Message />
     </DirectMessage>
     <FAQ>
-      <h1>PREGUNTAS FREQUENTES</h1>
-      <h2>Aut fore senserit arbitror ex nisi probant et coniunctione. Appellat est dolor possumus, do iis quis senserit.</h2>
-      <ul>
-        <li>- Doctrina veniam labore iis fugiat et cupidatat sed tempor incididunt.</li>
-        <li>- Quae eruditionem nescius dolor nescius te in et illum admodum.</li>
-      </ul>
-      <h2>Senserit a duis non dolore deserunt se quem veniam.</h2>
-      <ul>
-        <li>- Amet vidisse ingeniis ad amet qui e tempor incurreret.</li>
-      </ul>
-      <h2>Si ne tempor fugiat multos, nostrud ut voluptate.</h2>
-      <ul>
-        <li>- Esse litteris voluptate, quamquam e ipsum mentitum.</li>
-      </ul>
+      <h1>PREGUNTAS FRECUENTES</h1>
+      <Questions />
     </FAQ>
     <Rights>
       <p>Derechos Reservados a Laboratorios Pasteur 2018</p>

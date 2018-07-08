@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import OurInfo from './OurInfo';
+import ButtonQuote from './../ButtonQuote';
 
 const text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.";
 
@@ -17,18 +18,17 @@ const Placeholder = styled.img`
   height: 200px;
 `;
 
-const InfoBox = styled.div`
+const Info = styled(OurInfo)`
   box-sizing: border-box;
   padding: 40px 60px 0 60px;
   background-color: white;
-`;
+`
 
 const PageAbout = () => (
   <Layout>
     <Placeholder />
-    <InfoBox>
-      <OurInfo />
-    </InfoBox>
+    <Info />
+    <ButtonQuote quote={text} />
   </Layout>
 );
 

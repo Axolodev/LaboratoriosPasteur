@@ -9,7 +9,6 @@ import deportista from '../../assets/icons/deportista.svg';
 import organizacion from '../../assets/icons/organizacion.svg';
 
 const Section = styled.section`
-  background: #606163;
   overflow: hidden;
   width: 100%;
   min-height: 760px;
@@ -45,9 +44,10 @@ const GridItemLogo = styled.div`
 
 const GridItemTitle = styled.div`
   color: ${props => props.theme.color.lightBlue};
+  font-family: ${props => props.theme.fontFamily.main};
   margin: 1rem 0;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: bold;
 `;
 
@@ -56,6 +56,7 @@ const GridItemDescription = styled.div`
   font-family: "Times New Roman";
   font-size: 0.9rem;
   width: 80%;
+  font-family: ${props => props.theme.fontFamily.secondary};
   color: ${props => props.theme.color.white};
   line-height: 1.1rem;
 `;

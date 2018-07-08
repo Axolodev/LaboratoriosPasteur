@@ -1,11 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import ContactInfo from './ContactInfo';
 
 const Footer = () => (
-  <Fragment>
-    <ContactInfo />
-  </Fragment>
+  <ContactInfo />
 );
 
 export default Footer;
